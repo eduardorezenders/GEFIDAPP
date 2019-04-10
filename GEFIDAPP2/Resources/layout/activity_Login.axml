@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:background="@color/colorLogin"
+		android:gravity="center"
+		android:id="@+id/LoginLayout" >
+
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/txtCPF"
+			android:hint="Digite seu CPF"
+			android:maxLength="11"
+			android:inputType="number"
+			android:textColor="#FFFFFF"
+			android:textColorHint="#FFFFFF"
+			android:password="false"
+			android:phoneNumber="false"
+			android:numeric="integer" />
+		<EditText
+			android:inputType="textPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#FFFFFF"
+			android:textColorHint="#FFFFFF"
+			android:id="@+id/txtSenha"
+			android:maxLength="15"
+			android:layout_marginBottom="30dp"
+			android:hint="Digite sua senha" />
+		<Button
+			android:text="Acessar Conta"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnLogin"
+			android:backgroundTint="#ffbdbdbd" />
+		<Button
+			android:text="Criar Conta"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnCriar"
+			android:layout_marginBottom="30dp"
+			android:backgroundTint="#ffbdbdbd"/>
+		<CheckBox
+			android:text="Manter-me conectado"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#FFFFFF"
+			android:buttonTint="#FFFFFF"
+			android:id="@+id/chkManter" />
+	</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

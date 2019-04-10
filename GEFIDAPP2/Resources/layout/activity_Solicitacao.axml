@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<ScrollView 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/colorLogin" >
+
+			<TableLayout
+				android:orientation="vertical"
+				android:stretchColumns="2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingLeft="@dimen/activity_horizontal_margin"
+				android:paddingRight="@dimen/activity_horizontal_margin"
+				android:paddingTop="12dp"
+				android:descendantFocusability="beforeDescendants"
+				android:focusableInTouchMode="true"
+				android:id="@+id/SolicitacaoLayout"
+				android:gravity="center" >
+
+				<EditText
+					android:inputType="textMultiLine"
+					android:id="@+id/txtConteudo"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="10dp"
+					android:gravity="top|left"
+					android:lines="4"
+					android:textColor="#FFFFFF"
+					android:textColorHint="#FFFFFF"
+					android:hint="Digite sua solicitação"
+					android:scrollbars="vertical"
+					android:textSize="15sp" />
+			<TableRow>
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Digite o CEP"
+					android:maxLength="8"
+					android:inputType="number"
+					android:numeric="integer"
+					android:textColor="#FFFFFF"
+					android:textColorHint="#FFFFFF"
+					android:padding="10dp"
+					android:textSize="15sp"
+					android:id="@+id/txtCEP" />
+				<ImageButton
+					android:src="@drawable/abc_ic_search_api_material"
+					android:id="@+id/btnCEP"/>
+			</TableRow>
+
+				<EditText
+					android:inputType="textCapCharacters"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Digite o endereço completo"
+					android:textColor="#FFFFFF"
+					android:textColorHint="#FFFFFF"
+					android:padding="10dp"
+					android:textSize="15sp"
+					android:textAllCaps="false"
+					android:id="@+id/txtLocal" />
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/spnServico"
+					android:tooltipText="Selecione um serviço."
+					android:textSize="15sp"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="20dp" />
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/spnAssunto"
+					android:textSize="15sp"
+					android:tooltipText="Selecione um assunto."
+					android:layout_marginBottom="20dp" />
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/spnPrioridade"
+					android:textSize="15sp"
+					android:tooltipText="Selecione  uma prioridade."
+					android:layout_marginBottom="25dp" />
+
+				<TableLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:stretchColumns = "3">
+					<TableRow
+						android:gravity="center" >
+						<ImageButton
+							android:src="@drawable/ic_menu_gallery"
+							android:layout_width="48dp"
+							android:layout_height="48dp"
+							android:tooltipText="Adicionar imagem"
+							android:id="@+id/photoButton" />
+						<ImageButton
+							android:src="@drawable/ic_movie_black_18dp"
+							android:layout_width="48dp"
+							android:layout_height="48dp"
+							android:tooltipText="Adicionar vídeo"
+							android:id="@+id/videoButton" />
+						<ImageButton
+							android:src="@drawable/ic_menu_camera"
+							android:layout_width="48dp"
+							android:layout_height="48dp"
+							android:tooltipText="Tirar foto"
+							android:id="@+id/tirarPhotoButton" />
+					</TableRow>
+				</TableLayout>
+
+				<ImageView
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:id="@+id/photoViewer" />
+				<VideoView
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:id="@+id/videoViewer" />
+				<Button
+					android:text="Enviar solicitação"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:backgroundTint="#ffbdbdbd"
+					android:id="@+id/btnEnviarSolicitacao"
+					android:layout_marginBottom="30dp"/>
+			</TableLayout>
+	</ScrollView> 
+</android.support.design.widget.CoordinatorLayout>
